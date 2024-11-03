@@ -1,0 +1,6 @@
+{
+  "id": "{{randomInt lower=1 upper=100}}",
+  "name": "{{random 'Name.first_name'}}",
+  "position": "{{pickRandom 'Software Engineer' 'Project Manager' 'Data Analyst' 'UI/UX Designer'}}",
+  "createdOn": "{{now format='dd-MM-yyyy\'T\'HH:mm:ss'}}"
+}

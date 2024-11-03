@@ -1,0 +1,123 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "method": "GET",
+        "url": "/employees"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "employees.json"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "/employees/1"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "employee1.json"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "/employees/2"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "employee2.json"
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "url": "/employees"
+      },
+      "response": {
+        "status": 201,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "transformers": ["response-template"],
+        "bodyFileName": "newemployeeresponsetemplate.json"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "/employees/random"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "transformers": ["response-template"],
+        "bodyFileName": "randomdataresponsetemplate.json"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "urlPattern": "/employees/(John|john|Doe|doe)"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "employee1.json"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "urlPattern": "/employees/(Jane|jane|Smith|smith)"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "employee2.json"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "urlPattern": "/employees\\?id=1"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "employee1.json"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "urlPattern": "/employees\\?id=2"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "employee2.json"
+      }
+    }
+  ]
+}
